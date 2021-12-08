@@ -1,4 +1,4 @@
-var colors = [ 
+let colors = [ 
     "rgb(255, 0, 0)",
     "rgb(160, 82, 45)",
     "rgb(0, 255, 0)",
@@ -10,22 +10,22 @@ var colors = [
     "rgb(255, 255, 255)",
 ]
 
-var squares = document.querySelectorAll(".squares");
+let squares = document.querySelectorAll(".squares");
 
-var pickedColor=colors[3];
-var colorDisplay=document.getElementById("colorDisplay");
-var messageDisplay=document.querySelector("#message")
+let pickedColor=colors[3];
+let colorDisplay=document.getElementById("colorDisplay");
+let messageDisplay=document.querySelector("#message")
 
 colorDisplay.textContent=pickedColor;
 
-for(var i = 0; i < squares . length; i++){
+for(let i = 0; i < squares . length; i++){
  squares[i].style.backgroundColor = colors[i];
 
  // add click listener to squares
  squares[i].addEventListener("click", function(){
     
     // grad color of clicked square
- var clickedColor = this.style.backgroundColor;
+    let clickedColor = this.style.backgroundColor;
     // compair color of pickedColor
     if(clickedColor === pickedColor){
         messageDisplay.textContent= "Correct!";
